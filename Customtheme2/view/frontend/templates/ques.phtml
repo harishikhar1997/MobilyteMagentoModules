@@ -1,0 +1,31 @@
+<?php
+
+// $id=$block->getProductId();
+// print_r($id);exit;
+?>
+
+<form class="form" action="<?= $block->escapeUrl($block->getAction1()) ?>" method="post">
+
+    <fieldset class="fieldset">
+        <div class="field required">
+            <label for="text" class="label">
+                <span><?php echo __('Enter your question Here') ?></span>
+            </label>
+
+            <div class="control">
+                <input type="text" id="question"
+                       name="question"
+                       class="input-text">
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary" title="<?php echo __('Submit') ?>">
+                <span><?php echo __('Submit') ?></span>
+            </button>
+        </div>
+    </div>
+
+</form>

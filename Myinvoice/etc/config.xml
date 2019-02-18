@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <sales_email>
+            <uncaptured_orders>
+                <first_reminder_template>sales_email_uncaptured_orders_first_reminder_template</first_reminder_template>
+                <legal_notice_template>sales_email_uncaptured_orders_legal_notice_template</legal_notice_template>
+            </uncaptured_orders>
+        </sales_email>
+    </default>
+</config>

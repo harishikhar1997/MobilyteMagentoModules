@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="sales_email_uncaptured_orders_first_reminder_template" label="First Reminder" file="first_reminder.html" type="html" module="Mobilyte_Myinvoice" area="adminhtml"/>
+
+    <template id="sales_email_uncaptured_orders_legal_notice_template" label="Legal Warning" file="legal_notice.html" type="html" module="Mobilyte_Myinvoice" area="adminhtml"/>
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+
+    	<add id="Mobilyte_ImageGallery::mysettings" title="My Gallery" module="Mobilyte_ImageGallery" sortOrder="51" resource="Revision_Module1::mysettings"/>
+
+		<add id="Mobilyte_ImageGallery::post" title="Manage Gallery" module="Mobilyte_ImageGallery" sortOrder="10" resource="Mobilyte_ImageGallery::post" parent="Mobilyte_ImageGallery::mysettings" action="mobilyte_imagegallery/post/index"/>    	
+
+		<add id="Mobilyte_ImageGallery::configuration" title="Configuration" module="Mobilyte_ImageGallery" sortOrder="99" resource="Mobilyte_ImageGallery::configuration" parent="Mobilyte_ImageGallery::mysettings" action="adminhtml/system_config/edit/section/module1"/>
+
+    </menu>
+</config>

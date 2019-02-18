@@ -1,0 +1,47 @@
+<!--@subject Payment Reminder  @-->
+
+<style type="text/css">
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+</style>
+
+<div style="font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;">
+    <table cellspacing="0" cellpadding="0" border="0" width="98%" style="margin-top:10px; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
+        <tr>
+            <td align="center" valign="top">
+                <!-- [ header starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td valign="top">
+                            <a href="{{store url=''}}"><img src="{{var logo_url}}" alt="Magento"  style="margin-bottom:10px;" border="0" width="100px"/></a></td>
+                    </tr>
+                </table>
+
+                <!-- [ middle starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td valign="top">
+                            <p> Dear {{var name}},</p>
+
+                            <p> According to our records, we have not received a payment (€{{var order_amount}}) for order: {{var order_increment_id}} (SEE ATTACHMENT). Please transfer the amount within five days on our account NL80RABO0153471530 stating your invoice number.</p>
+
+                            <ul>
+                                <li>Your name: {{var name}}</li>
+                                <li>Your email address: {{var email}}</li>
+                                <li>Invoice ID: {{var increment_id}}</li>
+                                <li>Order date: {{var order_date}}</li>
+                                <li>Total amount: €{{var order_amount}}</li>
+                            </ul>
+
+                            <p>
+If you have questions about the bill or do you believe that it was sent in error, please contact us at: mithat@nkon.nl.</p>
+                            <p>Kind regards,
+<br>Mithat Kamer
+<br>Mobilyte</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>

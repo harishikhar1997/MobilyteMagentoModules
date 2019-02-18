@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+
+    	<add id="Mobilyte_Vendor::myvendor" title="My Vendor" module="Mobilyte_Vendor" sortOrder="51" resource="Revision_Module1::myvendor"/>
+
+		<add id="Mobilyte_Vendor::post" title="Manage Vendors" module="Mobilyte_Vendor" sortOrder="10" resource="Mobilyte_Vendor::post" parent="Mobilyte_Vendor::myvendor" action="vendor/post/index"/>    	
+
+    </menu>
+</config>

@@ -1,0 +1,179 @@
+<?php
+
+/**
+ * @var \Mobilyte\ImageGallery\Block\Gallery $block
+ */
+$mediaUrl = $block->getMediaPath();
+$prodColl = $block->getPostCollection();
+?>
+
+
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <img src="" id="modal-img"/>
+    <a class="prev" id="prevB" >&#10094;</a>
+    <a class="next" id="prevN" >&#10095;</a>
+    <div id="desc">
+    </div>
+  </div>
+
+</div>
+
+
+<div class='gallery-container' style="display: inline-flex; ">
+    <?php
+        foreach ($block->getPostCollection() as $key=>$post)
+            {
+                ?>
+                <div class='image-gallery'>
+                    <div id='img-gallery' data-url='<?php echo $mediaUrl.$post['featured_image']?>' data-descp='<?php echo $post['post_description']?>'>
+                           
+                        <img  class="mySlides" src="<?php echo $mediaUrl.$post['featured_image']?>" height='150px' width='200px' hspace='20'/><br>
+                        <imp><?php echo $post['name'];?></imp>    
+                        
+
+                        
+                    </div>
+                </div>
+                </div>
+                <?php
+            }
+    ?>
+</div>
+
+
+
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#img-gallery {
+    cursor:pointer;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 20%;
+  max-width: 1200px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+<script>
+
+    
+    //showSlides(slideIndex);
+
+    
+    
+    
+    require(['jquery'],function($){
+var slideIndex = 1;
+        $('.image-gallery  #img-gallery').click(function(){
+            var imgUrl = $(this).data('url');
+            var imgDescrip=$(this).data('descp');
+            
+            $('#modal-img').attr('src',imgUrl);
+            
+            $('#desc').html(imgDescrip);
+            
+            $('#myModal').show();
+
+        })
+
+        $('.close').click(function(){
+            $('#myModal').hide();
+        })
+
+$('#prevB').click(function(){
+    plusSlides(-1);
+})
+
+$('#prevN').click(function(){
+    plusSlides(1);
+})
+
+    function plusSlides(n) 
+    {
+        showSlides(slideIndex += n);
+    }
+    function showSlides(n)
+    {
+                var i;
+                var x = $(".mySlides");
+                console.log()
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length};
+                // for (i = 0; i < x.length; i++) {
+                //     $(x[i]).hide(); 
+                //   }
+                  //console.log('acasc');
+                  var nxtUrl = $(x[slideIndex-1]).attr('src');
+                  //console.log(nxtUrl);
+                  $('#modal-img').attr('src',nxtUrl); 
+    }
+
+    })
+</script>

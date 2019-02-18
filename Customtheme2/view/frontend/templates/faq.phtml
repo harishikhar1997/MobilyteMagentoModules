@@ -1,0 +1,36 @@
+<?php
+
+$post1 = $block->getDataCollection();
+?>
+
+<?php
+//print_r($block->getDataCollection()->getQuestion());exit();
+// echo '$post1';exit();
+//print_r($post1->getData());
+?>
+
+<div>
+<?php
+    if(sizeof($post1)<=0)
+                {
+                
+                ?>
+                    <h2>No queries asked yet.</h2>
+            <?php
+                }
+                else{
+                    foreach ($post1 as $key=>$post)
+            {
+            ?>       
+            
+                <h1>Ques.
+                    <?php echo $post['question']; ?> </h1>
+
+                <h2>Ans.
+                    <?php echo $post['answer']; ?> </h2>                              
+
+                <?php
+            }
+                }
+    ?>
+</div>

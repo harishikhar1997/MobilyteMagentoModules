@@ -1,0 +1,61 @@
+<!--@subject Subject Of your email  @-->
+
+{{template config_path="design/email/header_template"}}
+
+<style type="text/css">
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+</style>
+
+<div style="font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;">
+    <table cellspacing="0" cellpadding="0" border="0" width="98%" style="margin-top:10px; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
+        <tr>
+            <td align="center" valign="top">
+                <!-- [ header starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td valign="top">
+                            <a href="{{store url=''}}"><img src="{{var logo_url}}" alt="Magento"  style="margin-bottom:10px;" width="100px" border="0"/></a></td>
+                    </tr>
+                </table>
+
+                <!-- [ middle starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="650">
+                    <tr>
+                        <td valign="top">
+                            <p>Final warning regarding invoice: {{var increment_id}}</p>
+
+                            <p>Dear {{var name}},</p>
+
+                            <p>Our records have shown that the following invoice (#{{var increment_id}}, SEE APPENDIX) have not yet been paid by you, while the payment terms have already been expired:</p>
+
+                            <ul>
+                                <li>Your name: {{var name}}</li>
+                                <li>E-mail address: {{var email}}</li>
+                                <li>Invoice number: {{var increment_id}}</li>
+                                <li>Order number: {{var order_increment_id}}</li>
+                                <li>Order date: {{var order_date}}</li>
+                                <li>Total amount: €{{var order_amount}}</li>
+                            </ul>
+
+                            <p>We offer you once more the opportunity to pay the total amount without additional costs, within fifteen days, after this letter has been delivered to you, to our bank account number IBAN NL80RABO0153471530, stating: {{var order_increment_id}}</p>
+ 
+                            <p>The Dutch law stipulates that if we do not receive your payment, or do not receive it on time, we may charge you extrajudicial collection costs of +15% (minimum € 40) of the total invoice amount.</p>
+
+                            <p>We also have the right to demand the legal and contractual interest on the outstanding invoice amount.</p>
+
+                            <p>If your payment fails again, we will hand over this claim to Juristu Debt Collection Services B.V. (Juristu Incassodiensten B.V.) in Amsterdam.</p>
+
+                            <p>We hope to hear from you soon.</p>
+
+                            <p>Sincerely,
+                            <br>Hari
+                            <br>Mobilyte</p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+{{template config_path="design/email/footer_template"}}

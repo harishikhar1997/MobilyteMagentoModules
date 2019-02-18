@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Mobilyte_Myinvoice::uncaptured" title="Uncaptured Orders" translate="title" module="Mobilyte_Myinvoice" sortOrder="10" parent="Magento_Sales::sales" resource="Mobilyte_Myinvoice::uncaptured" />
+      
+       <add id="Mobilyte_Myinvoice::uncaptured_invoice" title="Pending Invoices" translate="title" module="Mobilyte_Myinvoice" sortOrder="50" parent="Mobilyte_Myinvoice::uncaptured" action="myinvoice/grid/index" resource="Mobilyte_Myinvoice::uncaptured_invoice"/>
+    </menu>
+</config>

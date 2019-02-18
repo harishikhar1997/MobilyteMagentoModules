@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mobilyte_Pinvoice::manager" title="Grid Manager" module="Mobilyte_Pinvoice" sortOrder="10" resource="Mobilyte_Pinvoice::manager"/>
+
+        <add id="Mobilyte_Pinvoice::add_row" title="Grid Manager" module="Mobilyte_Pinvoice" sortOrder="20" parent="Mobilyte_Pinvoice::manager" action="pinvoice/grid/index" resource="Mobilyte_Pinvoice::add_row"/>
+    </menu>
+</config>

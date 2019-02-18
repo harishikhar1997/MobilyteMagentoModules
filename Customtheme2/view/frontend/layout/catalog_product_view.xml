@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>    
+    </head>
+    <body>
+        <referenceBlock name="product.info.details">
+            <block class="Mobilyte\Customtheme2\Block\Ques" name="demo.tab" template="ques.phtml" group="detailed_info" >
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Ask Questions</argument>
+                </arguments>
+            </block>
+            <block class="Mobilyte\Customtheme2\Block\Faq" name="faq.tab" template="faq.phtml" group="detailed_info" >
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">FAQ</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        
+    </body>
+</page>
